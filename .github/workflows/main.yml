@@ -2,9 +2,9 @@
 name: Trigger Netlify Build
 on:
   schedule:
-    # “At minute 0 past every hour from 13 through 22 on every day-of-week from Monday through Friday.”
-    # https://crontab.guru/#0_7-22_*_*_1-5
-    - cron: '*/5 * * * *'
+    # “At 20:00 on every day-of-week from Monday through Friday.”
+    # https://crontab.guru/#0_20_*_*_1-5
+    - cron: '0 20 * * 1-5'
 jobs:
   build:
     name: Build Hook
