@@ -1,7 +1,23 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const yf = require("yahoo-finance")
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions: { createPage } }) => {
+  const homePageTemplate = path.resolve(`src/components/Home.js`)
+
+  const symbols = ["FB", "AMZN", "AAPL", "NFLX", "GOOG"]
+  const prices = await yf.quote({
+    symbols,
+    modules: ["price"],
+  })
+
+  const buildTime = new Date()
+
+  createPage({
+    path: `/`,
+    component: homePageTemplate,
+    context: {
+      prices,
+      buildTime,
+    },
+  })
+}

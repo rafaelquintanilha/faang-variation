@@ -595,3 +595,47 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+html,
+body,
+div[id^="___gatsby"],
+div[id^="gatsby-focus-wrapper"] {
+  height: 100%;
+}
+
+div[id^="gatsby-focus-wrapper"] > div[tabindex] {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container > .content {
+  max-width: 1100px;
+  padding: 80px 20px 40px 20px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.content > h1 {
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a {
+  font-weight: 600;
+  color: #033660;
+  text-decoration: none;
+}
