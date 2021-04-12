@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `FAANG Price Variation`,
-    description: `Be always up-to-date with the latest FAANG stock price changes.`,
+    description: `Be always up-to-date with the latest FAANG stocks price changes.`,
     author: `@rafaelquintanilha`,
   },
   plugins: [
